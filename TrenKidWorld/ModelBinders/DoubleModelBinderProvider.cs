@@ -2,7 +2,7 @@
 
 namespace TrenKidWorld.ModelBinders
 {
-    public class DecimalModelBinderProvider : IModelBinderProvider
+    public class DoubleModelBinderProvider : IModelBinderProvider
     {
         public IModelBinder? GetBinder(ModelBinderProviderContext context)
         {
@@ -11,9 +11,9 @@ namespace TrenKidWorld.ModelBinders
                 throw new ArgumentNullException(nameof(context));
             }
 
-            if (context.Metadata.ModelType == typeof(Decimal) || context.Metadata.ModelType == typeof(Decimal?)) 
+            if (context.Metadata.ModelType == typeof(Double) || context.Metadata.ModelType == typeof(Double?)) 
             {
-                return new DecimalModelBinder();
+                return new DoubleModelBinder();
             }
 
             return null;

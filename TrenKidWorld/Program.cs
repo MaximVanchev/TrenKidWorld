@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TrenKidWorld.Core.Constants;
 using TrenKidWorld.Data;
 using TrenKidWorld.ModelBinders;
 
@@ -17,6 +18,8 @@ builder.Services.AddControllersWithViews()
     .AddMvcOptions(options =>
     {
         options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
+        options.ModelBinderProviders.Insert(1, new DoubleModelBinderProvider());
+        options.ModelBinderProviders.Insert(2, new DateTimeModelBinderProvider(FormatingConstant.NormalDateConstant));
     });
 
 var app = builder.Build();
