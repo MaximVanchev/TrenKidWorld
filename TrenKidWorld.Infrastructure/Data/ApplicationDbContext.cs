@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace TrenKidWorld.Data
+namespace TrenKidWorld.Infrastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -9,5 +9,10 @@ namespace TrenKidWorld.Data
             : base(options)
         {
         }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CartProduct> CartProducts { get; set; }
+        public DbSet<Option> Options { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace TrenKidWorld.Data.Migrations
+namespace TrenKidWorld.Infrastructure.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TrenKidWorld.Core.Constants;
-using TrenKidWorld.Data;
+using TrenKidWorld.Infrastructure.Data;
 using TrenKidWorld.ModelBinders;
 
 var builder = WebApplication.CreateBuilder(args);

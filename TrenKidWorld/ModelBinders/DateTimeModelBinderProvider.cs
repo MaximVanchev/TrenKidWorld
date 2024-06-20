@@ -15,7 +15,7 @@ namespace TrenKidWorld.ModelBinders
         {
             if (context == null)
             {
-                throw new ArgumentNullException(nameof(context);
+                throw new ArgumentNullException(nameof(context));
             }
 
             if (context.Metadata.ModelType == typeof(DateTime) || context.Metadata.ModelType == typeof(DateTime?)) 
